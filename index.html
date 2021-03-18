@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/indexmobile.css" media="handheld" />
+    <script src="js/bootstrap.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BUSY WORK MAN</title>
+</head>
+
+
+<body>
+
+    <style>
+
+        .svg-wrapper {
+            height: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 150px;
+            display: inline-block;
+            float: left;
+        }
+
+            .svg-wrapper:hover {
+                cursor: pointer;
+            }
+
+        .shape {
+            stroke-dasharray: 40 400;
+            stroke-dashoffset: -255;
+            stroke-width: 6px;
+            fill: transparent;
+            stroke: white;
+            border-bottom: 5px solid black;
+            transition: stroke-width 0.4s, stroke-dashoffset 0.4s, stroke-dasharray 0.4s;
+        }
+
+        #homelink p {
+            font-family: 'VT323', monospace;
+            font-size: 25px;
+            line-height: 32px;
+            letter-spacing: 8px;
+            color: #fff;
+            margin: auto;
+            position: relative;
+            left:3px;
+            top: -48px;
+        }
+
+
+        #shoplink p {
+            font-family: 'VT323', monospace;
+            font-size: 25px;
+            line-height: 32px;
+            letter-spacing: 8px;
+            color: #fff;
+            margin: auto;
+            position: relative;
+            left:3px;
+            top: -48px;
+        }
+
+
+        .svg-wrapper:hover .shape {
+            stroke-width: 2px;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 760;
+        }
+
+
+
+        .container {
+            width: 100%;
+        }
+
+
+        body {
+            background-color: black;
+        }
+
+        .headertext {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+
+        #navbar {
+            margin: auto;
+            width: 340px;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        #navcontainer {
+            z-index: 10;
+            background-color: black;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar a.active {
+            color: gray;
+        }
+
+        #navbar a {
+            width: 150px;
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        .content {
+            z-index: 1;
+        }
+
+        .firstinfo {
+          height:800px;
+          padding: 30px;
+        }
+
+            .firstinfo p {
+                font-family: 'Bodoni Moda', serif;
+            }
+
+        .secondinfo p {
+            font-family: 'Bodoni Moda', serif;
+        }
+
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        .secondinfo {
+            height: 435px;
+            margin-top: -440px;
+            background-color: gray;
+        }
+
+        .headertext p {
+            height: 65px;
+            line-height: 45px;
+            padding: 0 10px;
+            transition: all 0.4s ease-in-out;
+            transform: translate3d(0, 0, 0);
+            vertical-align: top;
+            white-space: nowrap;
+            color: white;
+        }
+
+
+        .headertext img{
+          margin-top: 50px;
+          margin-bottom: 50px;
+          width:35vw;
+        }
+
+        .thirdtitle {
+            margin: auto;
+            margin-top: 60px;
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .infopanel {
+            margin: auto;
+            width: 280px;
+            padding: 20px;
+            margin-top: 30px;
+            height:100px;
+        }
+
+            .infopanel p {
+                color: white;
+                font-size:30px;
+                font-weight: 700;
+            }
+
+        .thirdinfo {
+          margin-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: black;
+            padding: 50px;
+            padding-left: 30%;
+        }
+
+        .footertitle {
+            font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .insbtn {
+            height: 50px;
+            width: 50px;
+        }
+
+            .insbtn img {
+                height: 50px;
+                width: 50px;
+            }
+
+
+        .firsttext{
+          margin-left:35.8vw;
+          display: inline-block;
+          z-index: 5;
+          position: relative;
+          top:42vh;
+          background-color: rgba(0, 0, 0, 0.8);
+          padding: 40px;
+          width:500px;
+        }
+
+        .firsttext{
+          color:white;
+          font-size: 22px;
+        }
+
+        .secondrow p{
+          display: inline-block;
+        }
+
+        .firstrow{
+          position: relative;
+        }
+
+        .phonenumber {
+          color:white;
+        }
+
+        .autocontent {
+          position: absolute;
+          margin-top: 50px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+          font-family:'VT323', monospace;;
+          font-size: 35px;
+          line-height: 40px;
+          color: #ecf0f1;
+        }
+        .content__container {
+          overflow: hidden;
+          height: 40px;
+          padding: 0 40px;
+        }
+        .content__container:before {
+          content: "[";
+          left: 0;
+        }
+        .content__container:after {
+          content: "]";
+          position: absolute;
+          right: 0;
+        }
+        .content__container:after, .content__container:before {
+          position: absolute;
+          top: 0;
+          color: #16a085;
+          font-size: 42px;
+          line-height: 40px;
+          -webkit-animation-name: opacity;
+          -webkit-animation-duration: 2s;
+          -webkit-animation-iteration-count: infinite;
+          animation-name: opacity;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+        .content__container__text {
+          display: inline;
+          float: left;
+          margin: 0;
+        }
+        .content__container__list {
+          margin-top: 0;
+          padding-left: 110px;
+          text-align: left;
+          list-style: none;
+          -webkit-animation-name: change;
+          -webkit-animation-duration: 10s;
+          -webkit-animation-iteration-count: infinite;
+          animation-name: change;
+          animation-duration: 10s;
+          animation-iteration-count: infinite;
+        }
+        .content__container__list__item {
+          line-height: 40px;
+          margin: 0;
+        }
+
+        @-webkit-keyframes opacity {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+        @-webkit-keyframes change {
+          0%, 12.66%, 100% {
+            transform: translate3d(0, 0, 0);
+          }
+          16.66%, 29.32% {
+            transform: translate3d(0, -25%, 0);
+          }
+          33.32%, 45.98% {
+            transform: translate3d(0, -50%, 0);
+          }
+          49.98%, 62.64% {
+            transform: translate3d(0, -75%, 0);
+          }
+          66.64%, 79.3% {
+            transform: translate3d(0, -50%, 0);
+          }
+          83.3%, 95.96% {
+            transform: translate3d(0, -25%, 0);
+          }
+        }
+        @keyframes opacity {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+        @keyframes change {
+          0%, 12.66%, 100% {
+            transform: translate3d(0, 0, 0);
+          }
+          16.66%, 29.32% {
+            transform: translate3d(0, -25%, 0);
+          }
+          33.32%, 45.98% {
+            transform: translate3d(0, -50%, 0);
+          }
+          49.98%, 62.64% {
+            transform: translate3d(0, -75%, 0);
+          }
+          66.64%, 79.3% {
+            transform: translate3d(0, -50%, 0);
+          }
+          83.3%, 95.96% {
+            transform: translate3d(0, -25%, 0);
+          }
+        }
+
+        .fade-in {
+          animation: fadeIn ease 3s;
+          -webkit-animation: fadeIn ease 3s;
+          -moz-animation: fadeIn ease 3s;
+          -o-animation: fadeIn ease 3s;
+          -ms-animation: fadeIn ease 3s;
+          }
+          @keyframes fadeIn {
+          0% {
+          opacity:0;
+          }
+          100% {
+          opacity:1;
+          }
+          }
+
+          @-moz-keyframes fadeIn {
+          0% {
+          opacity:0;
+          }
+          100% {
+          opacity:1;
+          }
+          }
+
+          @-webkit-keyframes fadeIn {
+          0% {
+          opacity:0;
+          }
+          100% {
+          opacity:1;
+          }
+          }
+
+          @-o-keyframes fadeIn {
+          0% {
+          opacity:0;
+          }
+          100% {
+          opacity:1;
+          }
+          }
+
+          @-ms-keyframes fadeIn {
+          0% {
+          opacity:0;
+          }
+          100% {
+          opacity:1;
+          }
+          }
+
+            @media only screen
+              and (min-device-width : 300px)
+              and (max-device-width : 768px) {
+                .ftext {
+                  width:80vw !important;
+                }
+
+                .fdesc{
+                  width:80vw !important;
+                }
+
+                .stext {
+                  width:80vw !important;
+                }
+
+                .sdesc{
+                  width:80vw !important;
+                }
+
+                .ttext {
+                  width:80vw !important;
+                }
+
+                .tdesc{
+                  width:80vw !important;
+                }
+
+
+                .footer{
+                  padding-left: 20% !important;
+                }
+
+                html,body{
+                  overflow-x: hidden;
+                }
+                #navbar{
+                  width:100vw;
+                  display: flex;
+                }
+
+                .svg-wrapper{
+                  margin: auto;
+                }
+
+                .firstwatch {
+                  height: 20vh;
+                  width:50vw;
+                  right:1vw;
+                  top:18vh;
+                }
+
+                .secondwatch {
+                  height: 16vh;
+                  width:44vw;
+                  left:1vw;
+                }
+
+                .firsttext{
+                  top:30vh;
+                  width:85vw;
+                  padding:10px;
+                  font-size:4vw;
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+
+                .firstinfo{
+                  height:450px;
+                }
+
+                .thirdwatch {
+                  height: 18vh;
+                  width:60vw;
+                  left:12vw;
+                }
+              }
+
+              .firstcontent{
+                margin-top:66px;
+                width:100%;
+              }
+
+              .ftext {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                color:white;
+                font-size:35px;
+              }
+
+
+              .fdesc {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                margin-top:50px;
+                color:white;
+                font-size:25px;
+              }
+
+
+              .stext {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                color:white;
+                font-size:35px;
+              }
+
+
+              .sdesc {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                margin-top:100px;
+                color:white;
+                font-size:25px;
+              }
+              .fimg {
+                width:280px;
+                margin:auto;
+                margin-top: 30px;
+              }
+              .secondcontent{
+                position: relative;
+                margin-top:80px;
+              }
+
+              .ttext {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                color:white;
+                font-size:35px;
+              }
+
+
+              .tdesc {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                margin-top:20px;
+                color:white;
+                font-size:25px;
+              }
+
+              .flink {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                color:white;
+                font-size:30px;
+                border:1px solid white;
+                padding: 10px;
+              }
+
+              .timgdesc {
+                font-family: 'VT323', monospace;
+                width:40vw;
+                margin:auto;
+                margin-top:30px;
+                color:white;
+                font-size:25px;
+              }
+
+              .thirdcontent{
+                margin-top: 80px;
+                padding-bottom: 50px;
+              }
+
+              .progress{
+                width:150px;
+                margin:auto;
+              }
+
+              .graphcard{
+                width:260px;
+                margin:auto;
+                margin-top: 20px;
+                display:inline-block;
+                margin-left: 10px;
+                margin-right: 10px;
+              }
+
+              .bluet{
+                font-family: 'VT323', monospace;
+                font-size:30px;
+                color:#2984ff;
+                margin-bottom: 0px;
+              }
+
+              .blueb{
+                background:#2984ff;
+              }
+
+              .greent{
+                font-family: 'VT323', monospace;
+                font-size:30px;
+                color:#9ff638;
+                margin-bottom: 0px;
+              }
+
+              .greenb{
+                background:#9ff638;
+              }
+
+              .purplet{
+                font-family: 'VT323', monospace;
+                font-size:30px;
+                color:#9933ff;
+                margin-bottom: 0px;
+              }
+
+              .purpleb{
+                background:#9933ff;
+              }
+
+              .oranget{
+                font-family: 'VT323', monospace;
+                font-size:30px;
+                color:#f6ca24;
+                margin-bottom: 0px;
+              }
+
+              .orangeb{
+                background:#f6ca24;
+              }
+
+
+              .customt{
+                font-family: 'VT323', monospace;
+                font-size:30px;
+                color:#c91a1a;
+                margin-bottom: 0px;
+                -webkit-text-stroke-width: 0.3px;
+                -webkit-text-stroke-color: white;
+              }
+
+              .fourthcontent{
+                margin-top: 30px;
+                padding-bottom: 100px;
+              }
+
+
+    </style>
+
+
+    <div class="headertext text-center">
+        <img src="images/title.png">
+    </div>
+
+    <div id="navcontainer">
+        <div id="navbar">
+            <div class="svg-wrapper" id="homelink">
+                <svg height="50" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="50" width="150" />
+                    <p class="text text-center">HOME</p>
+                </svg>
+            </div>
+            <div class="svg-wrapper" id="shoplink">
+                <svg height="50" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="50" width="150" />
+                    <p class="text text-center">LIST</p>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="firstcontent text-center">
+          <p class="ftext">WHAT IS BUSY WORK MAN?</p>
+          <img class="fimg" src="images/bwm.png" />
+          <p class="fdesc">BUSY WORK MAN is a collectible pixel art collection of 3000 randomly generated characters. Each character is created through algorithm with 7 randomly changing properties: skin, hair, eyes, face, shirt, pants, shoes. Among those 3000 characters, there are 30 with unique background design which is not programmed. </p>
+        </div>
+
+        <div class="secondcontent text-center">
+          <p class="stext">HOW IS BUSY WORK MAN GENERATED?</p>
+          <div class="autocontent">
+            <div class="content__container">
+              <p class="content__container__text">
+                Random
+              </p>
+
+              <ul class="content__container__list">
+                <li class="content__container__list__item">style</li>
+                <li class="content__container__list__item">color</li>
+                <li class="content__container__list__item">background</li>
+                <li class="content__container__list__item">TRAIT??</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="sdesc">Each BUSY WORK MAN is generated through a program with unique design. The program first creates the pixel art, then it compares the new art piece with existed BWMs through an image similarity algorithm. After the program validates there is no duplicated BWM in the system, it assigns a random number between 1 ~ 2970 (2971 ~ 3000: Special BWM) to the art piece.</p>
+        </div>
+
+        <div class="thirdcontent text-center">
+          <p class="ttext">
+            TRAITS LIMIT
+          </p>
+
+          <p class="tdesc">
+            There are some rare traits that have a maximum limit. There will be no more BWM generated with that trait if the maximum is reached. These traits will be revealed as we progress.
+          </p>
+
+          <p class="tdesc">
+            CONSTANT TRAIT: Each of the background color has a maximum limit, once the limit is reached, it will be removed from selection pool.
+          </p>
+
+          <p class="timgdesc">
+            CURRENT GENERATED:
+          </p>
+
+          <div class="tgraph">
+            <div class="graphcard">
+              <p class="bluet">
+                BLUE BACKGROUND
+              </p>
+              <div class="progress">
+                <div class="progress-bar blueb" role="progressbar" aria-valuenow="55"
+                aria-valuemin="0" aria-valuemax="100" style="width:55%">
+                </div>
+              </div>
+              <p class="bluet">
+                827 / 1500
+              </p>
+            </div>
+
+            <div class="graphcard">
+              <p class="greent">
+                GREEN BACKGROUND
+              </p>
+              <div class="progress">
+                <div class="progress-bar greenb" role="progressbar" aria-valuenow="43"
+                aria-valuemin="0" aria-valuemax="100" style="width:43%">
+                </div>
+              </div>
+              <p class="greent">
+                432 / 1000
+              </p>
+            </div>
+
+            <div class="graphcard">
+              <p class="purplet">
+                PURPLE BACKGROUND
+              </p>
+              <div class="progress">
+                <div class="progress-bar purpleb" role="progressbar" aria-valuenow="34"
+                aria-valuemin="0" aria-valuemax="100" style="width:34%">
+                </div>
+              </div>
+              <p class="purplet">
+                136 / 400
+              </p>
+            </div>
+
+            <div class="graphcard">
+              <p class="oranget">
+                ORANGE BACKGROUND
+              </p>
+              <div class="progress">
+                <div class="progress-bar orangeb" role="progressbar" aria-valuenow="44"
+                aria-valuemin="0" aria-valuemax="100" style="width:44%">
+                </div>
+              </div>
+              <p class="oranget">
+                31 / 70
+              </p>
+            </div>
+
+            <div class="graphcard">
+              <p class="customt">
+                CUSTOM BACKGROUND
+              </p>
+              <div class="progress">
+                <div class="progress-bar custom" role="progressbar" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                </div>
+              </div>
+              <p class="customt">
+                0 / 30
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="fourthcontent text-center">
+          <p class="ftext" style="margin-bottom:40px;">
+            HOW TO BUY
+          </p>
+
+          <a class="flink" href="https://opensea.io/collection/busy-work-man">
+            Opensea
+          </a>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p class="footertitle">
+            Busy Work Man
+        </p>
+        <p class="phonenumber">
+            busyworkmancollectible@gmail.com
+        </p>
+    </div>
+    <script>
+        window.onscroll = function () { scollcontrol() };
+
+        var navbar = document.getElementById("navcontainer");
+
+        var sticky = navbar.offsetTop;
+
+        function scollcontrol() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        document.getElementById("homelink").onclick = function () { redirectHome() };
+
+        function redirectHome() {
+            window.location.href = './index.html';
+        }
+
+        document.getElementById("shoplink").onclick = function () { redirectShop() };
+
+        function redirectShop() {
+            window.location.href = './list.html';
+        }
+
+        document.getElementById("aboutlink").onclick = function () { redirectAbout() };
+
+        function redirectAbout() {
+            window.location.href = './about.html';
+        }
+    </script>
+</body>
+</html>
